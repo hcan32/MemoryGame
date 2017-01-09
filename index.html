@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Angular</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body ng-app="myApp" >
+	
+
+
+	<div class="gameboard" ng-controller="GameController" ng-init="initGame()">
+		<div  ng-repeat="card in gameBoard track by $index">
+			<img ng-src="{{card}}" ng-click="turn($index)">
+		</div>		
+	</div>
+
+
+	<script src="js/app.js"></script>
+	<!-- add controllers here -->
+	<script src="js/controllers/GameController.js"></script>
+	<!-- add services here -->
+	<script src="js/services/currency.js"></script>
+</body>
+</html>
